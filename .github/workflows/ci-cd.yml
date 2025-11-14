@@ -8,8 +8,8 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME_USER: ${{ github.repository }}/user-service
-  IMAGE_NAME_ORDER: ${{ github.repository }}/order-service
+  IMAGE_NAME_USER: ${{ github.repository_owner }}/user-service
+  IMAGE_NAME_ORDER: ${{ github.repository_owner }}/order-service
 
 jobs:
   test:
@@ -103,6 +103,5 @@ jobs:
           echo "3. Roll out new versions"
           echo ""
           echo "Built images:"
-          echo "- ${{ env.IMAGE_NAME_USER }}:${{ github.sha }}"
-          echo "- ${{ env.IMAGE_NAME_ORDER }}:${{ github.sha }}"
-
+          echo "- ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_USER }}"
+          echo "- ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_ORDER }}"
