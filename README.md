@@ -30,21 +30,6 @@ This project demonstrates a complete CI/CD pipeline for a microservices applicat
 └── README.md            # This file
 ```
 
-## Features
-
-- ✅ **Automated Testing**: Jest test suites for both services
-- ✅ **Docker Containerization**: Multi-stage builds for optimized images
-- ✅ **CI/CD Pipeline**: GitHub Actions workflow for automated builds and deployments
-- ✅ **Monitoring**: Prometheus metrics collection and Grafana visualization
-- ✅ **Health Checks**: Built-in health endpoints for service monitoring
-
-## Prerequisites
-
-- Node.js 18+ and npm
-- Docker and Docker Compose
-- Git
-- GitHub account (for CI/CD)
-
 ## Local Setup
 
 ### 1. Install Dependencies
@@ -254,62 +239,6 @@ curl http://localhost:8003/metrics
 curl http://localhost:8002/metrics
 ```
 
-## Screenshots Required
 
-For your deliverables, capture:
-
-1. **Successful Pipeline Execution**:
-   - Go to GitHub Actions tab
-   - Screenshot the completed workflow run
-   - Show all green checkmarks
-
-2. **Grafana Dashboard**:
-   - Access Grafana at http://localhost:3000
-   - Navigate to the Microservices Monitoring Dashboard
-   - Screenshot showing at least one metric visualization
-
-## Troubleshooting
-
-### Services won't start
-- Check if ports 8002, 8003, 9090, 3000 are available
-- Verify Docker is running: `docker ps`
-
-### Tests failing
-- Ensure all dependencies are installed: `npm install`
-- Check Node.js version: `node --version` (should be 18+)
-
-### Prometheus not scraping metrics
-- Check Prometheus targets: http://localhost:9090/targets
-- Verify services are running: `docker-compose ps`
-- Check service logs: `docker-compose logs user-service`
-
-### Grafana not showing data
-- Verify Prometheus datasource is configured
-- Check dashboard is imported
-- Ensure Prometheus is scraping metrics successfully
-
-## Next Steps
-
-1. **Production Deployment**:
-   - Set up Kubernetes manifests
-   - Configure production environment variables
-   - Set up proper secrets management
-
-2. **Enhanced Monitoring**:
-   - Add alerting rules in Prometheus
-   - Configure Grafana alerts
-   - Add more custom metrics
-
-3. **Security**:
-   - Add authentication to services
-   - Secure Prometheus and Grafana
-   - Use secrets for sensitive data
-
-## License
-
-MIT
-
-## Author
-
-Your Name
+Kishan Thanki
 
